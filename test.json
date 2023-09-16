@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "dosen": "SD",
+      "mata_kuliah": "IF4201",
+      "kelas": "A",
+      "ruangan": "",
+      "sesi": "",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3"]
+      },
+      "tipe": "jurusan",
+      "rmk": "AJK"
+    },
+    {
+      "dosen": "RA",
+      "mata_kuliah": "IF4201",
+      "kelas": "A",
+      "ruangan": "",
+      "sesi": "",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3"]
+      },
+      "tipe": "jurusan",
+      "rmk": "AJK"
+    },
+    {
+      "dosen": "RA",
+      "mata_kuliah": "IF4201",
+      "kelas": "I",
+      "ruangan": "",
+      "sesi": "",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3"]
+      },
+      "tipe": "jurusan",
+      "rmk": "AJK"
+    },
+    {
+      "dosen": "AM",
+      "mata_kuliah": "IF4201",
+      "kelas": "B",
+      "ruangan": "",
+      "sesi": "",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3"]
+      },
+      "tipe": "jurusan",
+      "rmk": "AJK"
+    }
+  ]
+}
