@@ -1,0 +1,362 @@
+[
+  {
+    "kode_mk": "EF4506",
+    "nama": "Teknologi Antar Jaringan",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4507",
+    "nama": "Jaringan Nirkabel",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4508",
+    "nama": "Sistem Terdistribusi",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4509",
+    "nama": "Pemrograman Kompetitif",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 1
+  },
+  {
+    "kode_mk": "EF4510",
+    "nama": "Riset Operasi",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 3
+  },
+  {
+    "kode_mk": "EF4511",
+    "nama": "Teknik Pengembangan Game",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4513",
+    "nama": "Sistem Enterprise",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "EF4514",
+    "nama": "Tata Kelola Teknologi Informasi",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "ER4504",
+    "nama": "Manajemen Proyek Perangkat Lunak",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 6
+  },
+  {
+    "kode_mk": "ER4201",
+    "nama": "Rekayasa Kebutuhan",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 6
+  },
+  {
+    "kode_mk": "EF4517",
+    "nama": "Pengolahan Citra dan Visi Komputer",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 7
+  },
+  {
+    "kode_mk": "EF4518",
+    "nama": "Data Mining",
+    "sks": 3,
+    "semester": 5,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 7
+  },
+  {
+    "kode_mk": "EF4604",
+    "nama": "Komputasi Bergerak",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4605",
+    "nama": "Komputasi Pervasif dan Jaringan Sensor",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4606",
+    "nama": "Keamanan Jaringan",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4607",
+    "nama": "Keamanan Aplikasi",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4608",
+    "nama": "Pemrograman Berbasis Antarmuka",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 1
+  },
+  {
+    "kode_mk": "EF4609",
+    "nama": "Simulasi Sistem Dinamis",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 3
+  },
+  {
+    "kode_mk": "EF4610",
+    "nama": "Simulasi Berbasis Agen",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 3
+  },
+  {
+    "kode_mk": "EF4611",
+    "nama": "Teknik Peramalan",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 3
+  },
+  {
+    "kode_mk": "EF4612",
+    "nama": "Animasi Komputer dan Pemodelan 3D",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4613",
+    "nama": "Game Edukasi dan Simulasi",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4614",
+    "nama": "Desain Pengalaman Pengguna",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4615",
+    "nama": "Audit Sistem",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "EF4616",
+    "nama": "Basis Data Terdistribusi",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "EF4617",
+    "nama": "Sistem Informasi Geografis",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "ER4503",
+    "nama": "Kualitas Perangkat Lunak",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 6
+  },
+  {
+    "kode_mk": "ER4402",
+    "nama": "Konstruksi Perangkat Lunak",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 6
+  },
+  {
+    "kode_mk": "EK4501",
+    "nama": "Text Mining",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 7
+  },
+  {
+    "kode_mk": "EF4619",
+    "nama": "Deep Learning",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 7
+  },
+  {
+    "kode_mk": "EF4618",
+    "nama": "Game Engine",
+    "sks": 3,
+    "semester": 6,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4703",
+    "nama": "Teknologi IoT",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4704",
+    "nama": "Komputasi Awan",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4705",
+    "nama": "Forensik Digital",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 2
+  },
+  {
+    "kode_mk": "EF4706",
+    "nama": "Pemrograman Pengolahan Sinyal",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 1
+  },
+  {
+    "kode_mk": "EF4707",
+    "nama": "Pemrograman Data Sains Terapan",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 1
+  },
+  {
+    "kode_mk": "EF4708",
+    "nama": "Analisis Data Multivariat",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 3
+  },
+  {
+    "kode_mk": "EF4709",
+    "nama": "Simulasi Berorientasi Obyek",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 3
+  },
+  {
+    "kode_mk": "EF4710",
+    "nama": "Game Cerdas",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4711",
+    "nama": "Realitas X",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 8
+  },
+  {
+    "kode_mk": "EF4712",
+    "nama": "Big Data",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "EF4713",
+    "nama": "Komputasi Kuantum",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 4
+  },
+  {
+    "kode_mk": "ER4403",
+    "nama": "Arsitektur Perangkat Lunak",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 6
+  },
+  {
+    "kode_mk": "ER4505",
+    "nama": "Evolusi Perangkat Lunak",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 6
+  },
+  {
+    "kode_mk": "EK4601",
+    "nama": "Robotika",
+    "sks": 3,
+    "semester": 7,
+    "tipe": "Jurusan - P",
+    "rumpun_id": 7
+  }
+]

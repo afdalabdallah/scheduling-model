@@ -1,0 +1,12 @@
+{
+        "id": 1,
+        "kelas": "A",
+        "sesi": "",
+        "ruangan": "102",
+        "kode_mk": "EF4101",
+        "nama_mk": "Object Oriented Programming",
+        "rumpun": "AJK",
+        "nama_dosen": "Ariel Manihuruk",
+        "kode_dosen": "AM",
+        "semester": 3
+    },

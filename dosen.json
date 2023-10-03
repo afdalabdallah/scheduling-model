@@ -1,0 +1,642 @@
+[
+  {
+    "nama": "Dr. Yudhi Purwananto, S.Kom, M.Kom.",
+    "kode_dosen": "YP",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Dwi Sunaryono, S.Kom., M.Kom.",
+    "kode_dosen": "DS",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Fajar Baskoro, S.Kom., M.T.",
+    "kode_dosen": "FB",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Rully Soelaiman, S.Kom., M.Kom.",
+    "kode_dosen": "RL",
+    "preferensi": {
+      "hari": ["Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Misbakhul Munir Irfan Subakti, S.Kom., M.Sc.",
+    "kode_dosen": "IS",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Dr. Diana Purwitasari, S.Kom., M.Sc.",
+    "kode_dosen": "DP",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Ir. F.X. Arunanto, M.Sc.",
+    "kode_dosen": "AR",
+    "preferensi": {
+      "hari": ["Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Dr. Agus Budi Raharjo, S. Kom, M. Kom",
+    "kode_dosen": "AB",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 1
+  },
+  {
+    "nama": "Prof. Ir. Supeno Djanali, MSc, Ph.D.",
+    "kode_dosen": "SD",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 2
+  },
+  {
+    "nama": "Dr. Eng. Royyana Muslim I, S.Kom, M.Kom",
+    "kode_dosen": "RM",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 2
+  },
+  {
+    "nama": "Dr. Eng. Radityo Anggoro, S.Kom, M.Eng.Sc",
+    "kode_dosen": "RA",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 2
+  },
+  {
+    "nama": "Dr. Wahyu Suadi, S.Kom, M.Kom.",
+    "kode_dosen": "WS",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "rumpun_id": 2
+  },
+  {
+    "nama": "Prof. Dr. Ir. Joko Lianto Buliali, M.Sc",
+    "kode_dosen": "JL",
+    "preferensi": {
+      "hari": ["Senin", "Selasa"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 3
+  },
+  {
+    "nama": "Dr. Ahmad Saikhu, S,Si, MT.",
+    "kode_dosen": "AS",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 3
+  },
+  {
+    "nama": "Victor Hariadi, S.Si, M.Kom",
+    "kode_dosen": "VH",
+    "preferensi": {
+      "hari": ["Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 3
+  },
+  {
+    "nama": "Dr. Bilqis Amaliah, S.Kom, M.Kom",
+    "kode_dosen": "BA",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 3
+  },
+  {
+    "nama": "Arya YudhiWijaya, S.Kom.,M.Kom.",
+    "kode_dosen": "AW",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 3
+  },
+  {
+    "nama": "Dr. Darlis Herumurti, S.Kom, M.Kom",
+    "kode_dosen": "DH",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 4
+  },
+  {
+    "nama": "Dr. Anny Yuniarti, S.Kom, M.Comp.Sc.",
+    "kode_dosen": "AY",
+    "preferensi": { "hari": ["Selasa"], "sesi": ["Sesi 9", "Sesi 10"] },
+    "rumpun_id": 4
+  },
+  {
+    "nama": "Imam Kuswardayan, S.Kom., M.T.",
+    "kode_dosen": "IM",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 4
+  },
+  {
+    "nama": "Wijayanti Nurul Khotimah, S.Kom., M.Sc",
+    "kode_dosen": "WN",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 4
+  },
+  {
+    "nama": "Hadziq Fabroyir, S.Kom, PhD",
+    "kode_dosen": "HF",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 4
+  },
+  {
+    "nama": "Siska Arifiani, S.Kom, M.Kom",
+    "kode_dosen": "SA",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 4
+  },
+  {
+    "nama": "Waskitho Wibisono, S.Kom, M.Eng.,Ph.D",
+    "kode_dosen": "WW",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 5
+  },
+  {
+    "nama": "Tohari Ahmad, S.Kom, M.IT, Ph.D",
+    "kode_dosen": "TA",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 5
+  },
+  {
+    "nama": "Hudan Studiawan, S.Kom, M.Kom, PhD",
+    "kode_dosen": "HS",
+    "preferensi": {
+      "hari": ["Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 5
+  },
+  {
+    "nama": "Baskoro Adi P., S.Kom.,M.Kom., PhD",
+    "kode_dosen": "BS",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 5
+  },
+  {
+    "nama": "Ary Mazharuddin, S.Kom, M.Comp.Sc.,PhD",
+    "kode_dosen": "AM",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 5
+  },
+  {
+    "nama": "Bagus Jati Santoso, S.Kom, PhD",
+    "kode_dosen": "BJ",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 5
+  },
+  {
+    "nama": "Prof.Ir.Handayani Tjandrasa, M.Sc, Ph.D.",
+    "kode_dosen": "HT",
+    "preferensi": { "hari": ["Selasa", "Rabu"], "sesi": ["Sesi 9", "Sesi 10"] },
+    "rumpun_id": 6
+  },
+  {
+    "nama": "Dr. Eng. Nanik Suciati, S.Kom, M.Kom",
+    "kode_dosen": "NS",
+    "preferensi": {
+      "hari": ["Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 6
+  },
+  {
+    "nama": "Dr. Eng. ChastineFatichah, S.Kom, M.Kom",
+    "kode_dosen": "CF",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 6
+  },
+  {
+    "nama": "Dini Adni Navastara, S.Kom., M.Sc.",
+    "kode_dosen": "DA",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "rumpun_id": 6
+  },
+  {
+    "nama": "Prof. Dr. Eng. Agus Zainal Arifin, S.Kom, M.Kom.",
+    "kode_dosen": "AZ",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 6
+  },
+  {
+    "nama": "Prof. Drs.Ec.Ir. Riyanarto Sarno,M.Sc,Ph.D",
+    "kode_dosen": "RS",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Nurul Fajrin Ariyani, S.Kom., M.Sc.",
+    "kode_dosen": "NF",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Adhatus Solichah A., S.Kom., M.Sc.",
+    "kode_dosen": "AL",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Ratih Nur Esti Anggraini, S.Kom, M.Sc., PhD",
+    "kode_dosen": "RN",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Abdul Munif, S.Kom., M.Sc.",
+    "kode_dosen": "MN",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Shintami Chusnul Hidayati, S.Kom, PhD",
+    "kode_dosen": "SC",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Kelly Rosa Sungkono, S.Kom, M. Kom.",
+    "kode_dosen": "KR",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 7
+  },
+  {
+    "nama": "Dr.Ir. Siti Rochimah, MT",
+    "kode_dosen": "ST",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 8
+  },
+  {
+    "nama": "Daniel O. Siahaan, S.Kom. M,Sc, PD.Eng.",
+    "kode_dosen": "DO",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "rumpun_id": 8
+  },
+  {
+    "nama": "Sarwosri, S.Kom. M.T",
+    "kode_dosen": "SR",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 8
+  },
+  {
+    "nama": "Dr. Umi Laili Yuhana, S.Kom., M.Sc.",
+    "kode_dosen": "UY",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 8
+  },
+  {
+    "nama": "Rizky Januar Akbar, S.Kom.,M.Eng.",
+    "kode_dosen": "RJ",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "rumpun_id": 8
+  }
+]
