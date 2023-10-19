@@ -366,7 +366,6 @@ class GeneticAlgorithm():
         print("SKPB ", self.list_skpb)
         x,y,z,p,q = self._individuConstrain(fittest_individual)
         print(x,y,z,p,q)
-        print(dosen_pref_gagal)
        
         self.parseJsn(fittest_individual)
 
