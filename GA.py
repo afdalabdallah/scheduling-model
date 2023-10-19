@@ -1,30 +1,8 @@
 # from __future__ import print_function, division
-import string
 import numpy as np
 import random
 import json
 
-data_ruangan=[
-        "101",
-        "102",
-        "103",
-        "104",
-        "105",
-        "501",
-        "106",
-        "107",
-        "108",
-        "301",
-        "302",
-        "111",
-        "112"
-    ]
-
-
-x = 0 # First to third constraint
-y = 0
-z = 0
-p = 0 # fourth constraint
 
 # First number means # day of the week
 # The rest is the session of the day
@@ -32,14 +10,29 @@ p = 0 # fourth constraint
 # Ex. 110 = Monday, Session 10
 # A session means an hour, Session 1 starts from 7.00
 # That means Sesssion 2 is 8.00, Session 3 is 9.00, and so on.
-sesi=[]
+default_sesi=[]
+
+# Hanya perlu inisiasi satu kali di awal karena prefrensi dosen tidak akan beruabh
+# selama algoritma berjalan, jadi hanya menggunakan 1 variabel saja untuk pengecekan 
+# prefrensi
+# Struktur {"DA" : ["101,"102"]}
+# key = kode dosen, value: list sesi prefrensi
+dosenPrefensiDict = {}
 for i in range(1,6):
     for j in range(1,10,2):
         temp_sesi=""
         if j < 10:
-            sesi.append(str(i)+"0"+str(j))
+            default_sesi.append(str(i)+"0"+str(j))
         else:
-            sesi.append(str(i)+str(j))
+            default_sesi.append(str(i)+str(j))
+all_sesi = []
+for i in range(1,6):
+    for j in range(1,10):
+        temp_sesi=""
+        if j < 10:
+            all_sesi.append(str(i)+"0"+str(j))
+        else:
+            all_sesi.append(str(i)+str(j))
 
 class GeneticAlgorithm():
     """An implementation of a Genetic Algorithm which will try to produce the user
@@ -56,21 +49,49 @@ class GeneticAlgorithm():
         randomly changed.
     """
     def __init__(self, target_string, population_size, mutation_rate):
-        self.target = target_string
         self.population_size = population_size
         self.mutation_rate = mutation_rate
-        self.letters = [" "] + list(string.ascii_letters)
         self.data = {}
+        self.sesi = []
+        f = open('test.json')
+        self.data = json.load(f)
+        self.unwanted_sesi = self.data["unwanted_sesi"]
+        self.data_ruangan = self.data["ruangan"]
+        f.close()
 
-    def preferensiToSesi(self, preferensi):
-        hariArr = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
-        sesiArr = ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4", "Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
-        
-        return 
+    def preferensiToSesi(self, preferensiObj):
+        hariDict = {
+            "Senin":"1", 
+            "Selasa":"2", 
+            "Rabu":"3", 
+            "Kamis":"4", 
+            "Jumat":"5"
+            }
+        sesiDict = {
+            "Sesi 1":"01", 
+            "Sesi 2":"02", 
+            "Sesi 3":"03", 
+            "Sesi 4":"04", 
+            "Sesi 5":"05", 
+            "Sesi 6":"06", 
+            "Sesi 7":"07", 
+            "Sesi 8":"08", 
+            "Sesi 9":"09", 
+            "Sesi 10":"10"
+            }
+        listPrefrensi = []
+        tempSesi = ""
+        # print(preferensiObj)
+        for hari in preferensiObj["hari"]:
+            tempSesi = tempSesi + hariDict[hari]
+            for sesi in preferensiObj["sesi"]:
+                listPrefrensi.append(tempSesi + sesiDict[sesi])
+            tempSesi = ""
+
+
+        return listPrefrensi
 
     def _initIndividu(self):
-        f = open('api.json')
-        self.data = json.load(f)
         list_perkuliahan = []
         banyak_perkuliahan = len(self.data['data'])
         random_sesi =[]
@@ -80,15 +101,19 @@ class GeneticAlgorithm():
         # kebutuhan perkuliahan, jika banyak perkuliahan > sesi/ruangan
         # maka ambil semua data sesi/ruangan, jika tidak maka
         # cukup ambil sebanyak perkuliahan yang ada
-        if(banyak_perkuliahan > len(data_ruangan)):
-            random_ruangan = random.sample(data_ruangan, len(data_ruangan))
+        if(banyak_perkuliahan > len(self.data_ruangan)):
+            # random_ruangan = random.sample(data_ruangan, len(data_ruangan))
+            random_ruangan = np.random.choice(a=self.data_ruangan, size=len(self.data_ruangan), replace=False)
         else:
-            random_ruangan = random.sample(data_ruangan, banyak_perkuliahan)
+            random_ruangan = np.random.choice(a=self.data_ruangan, size=len(banyak_perkuliahan)+1, replace=False)
+            # random_ruangan = random.sample(data_ruangan, banyak_perkuliahan)
 
-        if(banyak_perkuliahan > len (sesi)):
-            random_sesi = random.sample(sesi, len(sesi))
+        if(banyak_perkuliahan > len (self.sesi)):
+            random_sesi = np.random.choice(a=self.sesi, size=len(self.sesi), replace=False)
+            # random_sesi = random.sample(sesi, len(sesi))
         else:
-            random_sesi = random.sample(sesi, banyak_perkuliahan)
+            random_sesi = np.random.choice(a=self.sesi, size=len(banyak_perkuliahan)+1, replace=False)
+            # random_sesi = random.sample(sesi, banyak_perkuliahan)
 
         # Iteration for sesi and ruangan
         j = 0 # ruangan
@@ -96,9 +121,10 @@ class GeneticAlgorithm():
 
         # Inisiasi untuk SKPB
         self.list_skpb = []
-
         for data in self.data['data']:
-            individuSesi = self.preferensiToSesi(data['preferensi'])
+            individuSesi = self.preferensiToSesi(data["preferensi"])
+            if data['dosen'] not in dosenPrefensiDict:
+                dosenPrefensiDict[data['dosen']] = individuSesi
             if data['mata_kuliah'][0:2] != "UG":
                 list_perkuliahan.append(data['dosen']+data['mata_kuliah']+data['kelas']+random_ruangan[j]+random_sesi[k])
                 j = j + 1
@@ -107,17 +133,27 @@ class GeneticAlgorithm():
                     j = 0
                 if k >= len(random_sesi):
                     k = 0
+                
             else: # Input data SKPB
                 self.list_skpb.append(data['dosen']+data['mata_kuliah']+data['kelas']+data['ruangan']+data['sesi'])
         
-        f.close()
+        
         # list_perkuliahan sudah menjadi Individu
         return list_perkuliahan
        
+    def removeUnwantedSesi(self):
+        for unwanted in self.unwanted_sesi:
+            if unwanted in default_sesi:
+                default_sesi.remove(unwanted)
+            if unwanted in all_sesi:
+                all_sesi.remove(unwanted)
+        return default_sesi
 
     def _initialize(self):
         """ Initialize population with random strings """
         self.population = []
+        self.sesi = self.removeUnwantedSesi()
+
         for _ in range(self.population_size):
             # Enter individu to population
             individual = self._initIndividu()
@@ -129,8 +165,8 @@ class GeneticAlgorithm():
         y = 0
         z = 0
         p = 0 # fourth constraint
-       
-        for i in range(len(individu)-1):
+        q = 0 # prefrensi
+        for i in range(len(individu)):
             cnt_day = 0
             for j in range(i+1,len(individu)):
                 if individu[i][2:9] != individu[j][2:9]:
@@ -151,10 +187,18 @@ class GeneticAlgorithm():
                         z = z + cnt_day - 2
                    
             p = p + self.skpbConstraint(individu[i])
+            q = q + self.prefrensiConstraint(individu[i])
             
         
-        return [x,y,z,p]
-        
+        return [x,y,z,p,q]
+    
+    def prefrensiConstraint(self, gen):
+        qnow = 0
+        if gen[12:15] not in dosenPrefensiDict[gen[0:2]]:
+            qnow = qnow + 1
+        return qnow
+
+
     def skpbConstraint(self, gen):
         pnow = 0
         for i in range(len(self.list_skpb)):
@@ -165,13 +209,14 @@ class GeneticAlgorithm():
         return pnow
 
     def individuFitness(self, individual):
-        w1 = 30
-        w2 = 30
-        w3 = 20
-        w4 = 20
-        x,y,z,p = self._individuConstrain(individual)
-        fitness = w1/(x+1) + w2/(y+1) + w3/(z+1) +w4/(p+1)
-        return [fitness, x,y,z,p]
+        w1 = 34
+        w2 = 34
+        w3 = 16
+        w4 = 15
+        w5 = 1
+        x,y,z,p,q = self._individuConstrain(individual)
+        fitness = w1/(x+1) + w2/(y+1) + w3/(z+1) +w4/(p+1)+w5/(q+1)
+        return [fitness, x,y,z,p,q]
           
     def _calculate_fitness(self):
         """ Calculates the fitness of each individual in the population """
@@ -179,13 +224,14 @@ class GeneticAlgorithm():
         w1 = 30
         w2 = 30
         w3 = 20
-        w4 = 20
+        w4 = 19
+        w5 = 1
         for individual in self.population:
-            # loss: Array[x,y,z,p]
-            x,y,z,p = self._individuConstrain(individual)
-            print("x,y,z,p", x,y,z,p)
+            # loss: Array[x,y,z,p,q]
+            x,y,z,p,q = self._individuConstrain(individual)
+            # print("x,y,z,p,q", x,y,z,p,q)
             
-            fitness = w1/(x+1) + w2/(y+1) + w3/(z+1) + w4/(p+1) 
+            fitness = w1/(x+1) + w2/(y+1) + w3/(z+1) + w4/(p+1) + w5/(q+1)
             
             # fitness = round(fitness)
             population_fitness.append(fitness)
@@ -199,7 +245,7 @@ class GeneticAlgorithm():
         p3 = random.random()
         p4 = random.random()
         individual = list(individual)
-        fitness,xm,ym,zm,ppm = self.individuFitness(individual)
+        fitness,xm,ym,zm,ppm,qm = self.individuFitness(individual)
         pm = 0
         if fitness >= avg_fitness:
             pm = p3 * (highest_fitness-fitness)/(highest_fitness-avg_fitness + 1e8) + 1e8
@@ -208,13 +254,13 @@ class GeneticAlgorithm():
         for j in range(len(individual)):
             # Make change with probability mutation_rate
             if np.random.random() < pm:
-                if xm >ym:
+                if xm >ym or qm > 0:
                     temp_str = individual[j][0:12]
-                    temp_str = temp_str + random.sample(sesi,1)[0]
+                    temp_str = temp_str + random.sample(all_sesi,1)[0]
                     individual[j] = temp_str
                 else: 
                     temp_str = individual[j][0:9]
-                    temp_str = temp_str + random.sample(data_ruangan,1)[0] + individual[j][12:15]
+                    temp_str = temp_str + random.sample(self.data_ruangan,1)[0] + individual[j][12:15]
                     individual[j] = temp_str
                 # else:
                 #     temp_str = individual[j][0:9]
@@ -255,6 +301,7 @@ class GeneticAlgorithm():
         for epoch in range(iterations):
             population_fitness = self._calculate_fitness()
             print(population_fitness)
+            
             # print(x,y,z,p)
             # This is the indivdual
             fittest_individual = self.population[np.argmax(population_fitness)]
@@ -266,7 +313,7 @@ class GeneticAlgorithm():
             if highest_fitness >= maximum_fitness:
                 maximum_fitness = highest_fitness
                 most_fit = fittest_individual
-            if epoch == iterations or highest_fitness >= 85:
+            if epoch == iterations:
                 break
 
         #     # Set the probability that the individual should be selected as a parent
@@ -308,19 +355,25 @@ class GeneticAlgorithm():
                 new_population += [self._mutate(child1,highest_fitness,avg_fitness), self._mutate(child2,highest_fitness,avg_fitness)]
 
             print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
+           
             self.population = new_population
+            # print(self.population)
 
         if highest_fitness <= maximum_fitness:
             fittest_individual = most_fit
             highest_fitness = maximum_fitness
         print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
         print("SKPB ", self.list_skpb)
+        x,y,z,p,q = self._individuConstrain(fittest_individual)
+        print(x,y,z,p,q)
+       
         self.parseJsn(fittest_individual)
 
     def parseJsn(self,individual):
         f = open('result.json','w')
         result = {
-            "data" :[]
+            "data" :[],
+            "skpb":[]
         }
         for index in range(len(individual)):
             res = {
@@ -345,7 +398,7 @@ class GeneticAlgorithm():
                 "tipe": "SK",
                 "rmk": "SKPB"
             }
-            result["data"].append(res)
+            result["skpb"].append(res)
         f.write(json.dumps(result))
         f.close()
     
@@ -355,5 +408,6 @@ def main():
     # GA._initSKPB()
     # GA._init_('Genetic Algorithm',100,0.05)
     GA.run(1000)
+    # print(dosenPrefensiDict)
 
 main()
