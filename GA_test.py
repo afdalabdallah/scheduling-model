@@ -125,8 +125,6 @@ class GeneticAlgorithm():
             individuSesi = self.preferensiToSesi(data["preferensi"])
             if data['dosen'] not in dosenPrefensiDict:
                 dosenPrefensiDict[data['dosen']] = individuSesi
-            if data['dosen'] not in dosen_pref_gagal:
-                dosen_pref_gagal[data['dosen']] = 0
             if data['mata_kuliah'][0:2] != "UG":
                 list_perkuliahan.append(data['dosen']+data['mata_kuliah']+data['kelas']+random_ruangan[j]+random_sesi[k])
                 j = j + 1
