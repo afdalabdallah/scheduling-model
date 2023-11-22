@@ -57,6 +57,7 @@ class GeneticAlgorithm():
         self.data = json.load(f)
         self.unwanted_sesi = self.data["unwanted_sesi"]
         self.data_ruangan = self.data["ruangan"]
+
         f.close()
 
     def preferensiToSesi(self, preferensiObj):
@@ -92,54 +93,40 @@ class GeneticAlgorithm():
         return listPrefrensi
 
     def _initIndividu(self):
-        list_perkuliahan = []
-        banyak_perkuliahan = len(self.data['data'])
-        random_sesi =[]
-        random_ruangan= []
-
-        # Mengambil sesi/ruangan random dari data sesuai dengan 
-        # kebutuhan perkuliahan, jika banyak perkuliahan > sesi/ruangan
-        # maka ambil semua data sesi/ruangan, jika tidak maka
-        # cukup ambil sebanyak perkuliahan yang ada
-        if(banyak_perkuliahan > len(self.data_ruangan)):
-            # random_ruangan = random.sample(data_ruangan, len(data_ruangan))
-            random_ruangan = np.random.choice(a=self.data_ruangan, size=len(self.data_ruangan), replace=False)
-        else:
-            random_ruangan = np.random.choice(a=self.data_ruangan, size=len(banyak_perkuliahan)+1, replace=False)
-            # random_ruangan = random.sample(data_ruangan, banyak_perkuliahan)
-
-        if(banyak_perkuliahan > len (self.sesi)):
-            random_sesi = np.random.choice(a=self.sesi, size=len(self.sesi), replace=False)
-            # random_sesi = random.sample(sesi, len(sesi))
-        else:
-            random_sesi = np.random.choice(a=self.sesi, size=len(banyak_perkuliahan)+1, replace=False)
-            # random_sesi = random.sample(sesi, banyak_perkuliahan)
-
-        # Iteration for sesi and ruangan
-        j = 0 # ruangan
-        k = 0 # sesi
-
+        cols = len(all_sesi)
+        rows = len(self.data_ruangan)
+        timetable = [['' for j in range(cols)] for i in range(rows)]
+      
         # Inisiasi untuk SKPB
+        self.timetable_skpb=['' for i in range(cols)]
         self.list_skpb = []
         for data in self.data['data']:
             individuSesi = self.preferensiToSesi(data["preferensi"])
             if data['dosen'] not in dosenPrefensiDict:
                 dosenPrefensiDict[data['dosen']] = individuSesi
+
             if data['mata_kuliah'][0:2] != "UG":
-                list_perkuliahan.append(data['dosen']+data['mata_kuliah']+data['kelas']+random_ruangan[j]+random_sesi[k])
-                j = j + 1
-                k = k + 1
-                if j >= len(random_ruangan):
-                    j = 0
-                if k >= len(random_sesi):
-                    k = 0
+                class_activity = data['dosen']+data['mata_kuliah']+data['kelas']
+                while(True):
+                    random_cols = np.random.choice(np.arange(len(all_sesi)), size=1, replace=False)
+                    if random_cols not in self.unwanted_sesi:
+                        break
+              
+                random_rows = np.random.choice(np.arange(len(self.data_ruangan)), size=1, replace=False)
+                class_activity = data['dosen']+data['mata_kuliah']+data['kelas']
+                timetable[int(random_rows)][int(random_cols)].append(class_activity) 
                 
             else: # Input data SKPB
+                first_digit = int(data['sesi'][0]) - 1
+                last_digit = int(data['sesi'][2]) - 1
+                
+                skpb_col = first_digit * 10 + last_digit
+                self.timetable_skpb[skpb_col] = data['dosen']+data['mata_kuliah']+data['kelas']+data['sesi']
                 self.list_skpb.append(data['dosen']+data['mata_kuliah']+data['kelas']+data['ruangan']+data['sesi'])
         
         
         # list_perkuliahan sudah menjadi Individu
-        return list_perkuliahan
+        return timetable
        
     def removeUnwantedSesi(self):
         for unwanted in self.unwanted_sesi:
@@ -152,12 +139,15 @@ class GeneticAlgorithm():
     def _initialize(self):
         """ Initialize population with random strings """
         self.population = []
-        self.sesi = self.removeUnwantedSesi()
+        # self.sesi = self.removeUnwantedSesi()
 
         for _ in range(self.population_size):
             # Enter individu to population
             individual = self._initIndividu()
+            # print(individual)
+            # print("End of individual")
             self.population.append(individual)
+        print(self.timetable_skpb)
 
     # Return number of violation [x,y,z] for an individual
     def _individuConstrain(self, individu):
@@ -313,81 +303,81 @@ class GeneticAlgorithm():
     def run(self, iterations):
         # Initialize new population
         self._initialize()
-        # print("population\n",self.population)
-        p1 = 0.5
-        p2 = 0.5
-        maximum_fitness = 0
-        most_fit = []
-        for epoch in range(iterations):
-            population_fitness = self._calculate_fitness()
-            print(population_fitness)
+        print("population\n",self.population)
+        # p1 = 0.5
+        # p2 = 0.5
+        # maximum_fitness = 0
+        # most_fit = []
+        # for epoch in range(iterations):
+        #     population_fitness = self._calculate_fitness()
+        #     print(population_fitness)
             
-            # print(x,y,z,p)
-            # This is the indivdual
-            fittest_individual = self.population[np.argmax(population_fitness)]
-            # While this is the number
-            highest_fitness = max(population_fitness)
-            lowest_fitness = min(population_fitness)
-            avg_fitness = round(sum(population_fitness) / len(population_fitness))
-        #     # If we have found individual which matches the target => Done
-            if highest_fitness >= maximum_fitness:
-                maximum_fitness = highest_fitness
-                most_fit = fittest_individual
-            if epoch == iterations:
-                break
+        #     # print(x,y,z,p)
+        #     # This is the indivdual
+        #     fittest_individual = self.population[np.argmax(population_fitness)]
+        #     # While this is the number
+        #     highest_fitness = max(population_fitness)
+        #     lowest_fitness = min(population_fitness)
+        #     avg_fitness = round(sum(population_fitness) / len(population_fitness))
+        # #     # If we have found individual which matches the target => Done
+        #     if highest_fitness >= maximum_fitness:
+        #         maximum_fitness = highest_fitness
+        #         most_fit = fittest_individual
+        #     if epoch == iterations:
+        #         break
 
-        #     # Set the probability that the individual should be selected as a parent
-        #     # proportionate to the individual's fitness.
-            parent_probabilities = []
-            # print("Fitness\n", population_fitness)
-            # print("Highest:\n", highest_fitness)
-            # print("Average:\n", avg_fitness)
-            # print("Lowest:\n", lowest_fitness)
-            for fitness in population_fitness:
-                probability = 0
-                if fitness >= avg_fitness:
-                    probability = ( (fitness-avg_fitness)/(highest_fitness-avg_fitness + 1e8)) + 1e8
-                else:
-                    probability =  ((avg_fitness-fitness)/(avg_fitness-lowest_fitness + 1e8)) + 1e8
+        # #     # Set the probability that the individual should be selected as a parent
+        # #     # proportionate to the individual's fitness.
+        #     parent_probabilities = []
+        #     # print("Fitness\n", population_fitness)
+        #     # print("Highest:\n", highest_fitness)
+        #     # print("Average:\n", avg_fitness)
+        #     # print("Lowest:\n", lowest_fitness)
+        #     for fitness in population_fitness:
+        #         probability = 0
+        #         if fitness >= avg_fitness:
+        #             probability = ( (fitness-avg_fitness)/(highest_fitness-avg_fitness + 1e8)) + 1e8
+        #         else:
+        #             probability =  ((avg_fitness-fitness)/(avg_fitness-lowest_fitness + 1e8)) + 1e8
                 
-                # probability = round(probability, 3)
-                probability = probability / sum(population_fitness)
-                # probability = probability * 100
-                parent_probabilities.append(probability)
-            # print(sum(parent_probabilities))
-            # print(parent_probabilities)
-        #     # Determine the next generation
-            new_population = []
-            for i in np.arange(0, self.population_size, 2):
-        #         # Select two parents randomly according to probabilities
+        #         # probability = round(probability, 3)
+        #         probability = probability / sum(population_fitness)
+        #         # probability = probability * 100
+        #         parent_probabilities.append(probability)
+        #     # print(sum(parent_probabilities))
+        #     # print(parent_probabilities)
+        # #     # Determine the next generation
+        #     new_population = []
+        #     for i in np.arange(0, self.population_size, 2):
+        # #         # Select two parents randomly according to probabilities
                 
-                parent1_f, parent2_f = random.choices(population_fitness, k=2, weights=parent_probabilities)
-                parent1_index = population_fitness.index(parent1_f)
-                parent1 = self.population[parent1_index]
-                # print(parent1)
+        #         parent1_f, parent2_f = random.choices(population_fitness, k=2, weights=parent_probabilities)
+        #         parent1_index = population_fitness.index(parent1_f)
+        #         parent1 = self.population[parent1_index]
+        #         # print(parent1)
 
-                parent2_index = population_fitness.index(parent2_f)
-                parent2 = self.population[parent2_index]
+        #         parent2_index = population_fitness.index(parent2_f)
+        #         parent2 = self.population[parent2_index]
 
-        #         # Perform crossover to produce offspring
-                child1, child2 = self._crossover(parent1, parent2)
-        #         # Save mutated offspring for next generation
-                new_population += [self._mutate(child1,highest_fitness,avg_fitness), self._mutate(child2,highest_fitness,avg_fitness)]
+        # #         # Perform crossover to produce offspring
+        #         child1, child2 = self._crossover(parent1, parent2)
+        # #         # Save mutated offspring for next generation
+        #         new_population += [self._mutate(child1,highest_fitness,avg_fitness), self._mutate(child2,highest_fitness,avg_fitness)]
 
-            print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
+        #     print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
            
-            self.population = new_population
-            # print(self.population)
+        #     self.population = new_population
+        #     # print(self.population)
 
-        if highest_fitness <= maximum_fitness:
-            fittest_individual = most_fit
-            highest_fitness = maximum_fitness
-        print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
-        print("SKPB ", self.list_skpb)
-        x,y,z,p,q = self._individuConstrain(fittest_individual)
-        print(x,y,z,p,q)
+        # if highest_fitness <= maximum_fitness:
+        #     fittest_individual = most_fit
+        #     highest_fitness = maximum_fitness
+        # print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
+        # print("SKPB ", self.list_skpb)
+        # x,y,z,p,q = self._individuConstrain(fittest_individual)
+        # print(x,y,z,p,q)
        
-        self.parseJsn(fittest_individual)
+        # self.parseJsn(fittest_individual)
 
     def parseJsn(self,individual):
         f = open('result.json','w')

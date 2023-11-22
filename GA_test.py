@@ -48,9 +48,8 @@ class GeneticAlgorithm():
         The rate (or probability) of which the alleles (chars in this case) should be
         randomly changed.
     """
-    def __init__(self, target_string, population_size, mutation_rate):
+    def __init__(self, population_size):
         self.population_size = population_size
-        self.mutation_rate = mutation_rate
         self.data = {}
         self.sesi = []
         f = open('test.json')
@@ -241,7 +240,6 @@ class GeneticAlgorithm():
     def _mutate(self, individual, highest_fitness, avg_fitness):
         """ Randomly change the individual's characters with probability
         self.mutation_rate """
-        # print(individual)
         p3 = random.random()
         p4 = random.random()
         individual = list(individual)
@@ -275,7 +273,6 @@ class GeneticAlgorithm():
         cross_i = np.random.randint(0, len(parent1))
         child1 = parent1[:cross_i] + parent2[cross_i:]
         child2 = parent2[:cross_i] + parent1[cross_i:]
-        # print("c1 " ,child1 , " c2 " , child2)
         return child1, child2
     
     def terminate(self, population_fitness):
@@ -290,17 +287,17 @@ class GeneticAlgorithm():
         return False
 
 
-    def run(self, iterations):
+    def run(self):
         # Initialize new population
         self._initialize()
-        # print("population\n",self.population)
+        iterations = 100
         p1 = 0.5
         p2 = 0.5
         maximum_fitness = 0
         most_fit = []
         for epoch in range(iterations):
             population_fitness = self._calculate_fitness()
-            print(population_fitness)
+            #print (population_fitness)
             
             # print(x,y,z,p)
             # This is the indivdual
@@ -354,7 +351,7 @@ class GeneticAlgorithm():
         #         # Save mutated offspring for next generation
                 new_population += [self._mutate(child1,highest_fitness,avg_fitness), self._mutate(child2,highest_fitness,avg_fitness)]
 
-            print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
+            # print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
            
             self.population = new_population
             # print(self.population)
@@ -362,12 +359,13 @@ class GeneticAlgorithm():
         if highest_fitness <= maximum_fitness:
             fittest_individual = most_fit
             highest_fitness = maximum_fitness
-        print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
-        print("SKPB ", self.list_skpb)
+        # print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
+        # print("SKPB ", self.list_skpb)
         x,y,z,p,q = self._individuConstrain(fittest_individual)
-        print(x,y,z,p,q)
-       
-        self.parseJsn(fittest_individual)
+        # print(x,y,z,p,q)
+
+        return self.parseJsn(fittest_individual)
+
 
     def parseJsn(self,individual):
         f = open('result.json','w')
@@ -401,13 +399,10 @@ class GeneticAlgorithm():
             result["skpb"].append(res)
         f.write(json.dumps(result))
         f.close()
+        return result
     
 
 def main():
     GA = GeneticAlgorithm('Tidak semuanya benar',10,0.05)
-    # GA._initSKPB()
-    # GA._init_('Genetic Algorithm',100,0.05)
     GA.run(1000)
-    # print(dosenPrefensiDict)
 
-main()
