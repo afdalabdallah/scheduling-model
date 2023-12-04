@@ -53,6 +53,7 @@ class GeneticAlgorithm():
         self.mutation_rate = mutation_rate
         self.data = {}
         self.sesi = []
+        self.transferred = {}
         self.skpb_sesi = []
         f = open('test.json')
         self.data = json.load(f)
@@ -130,7 +131,21 @@ class GeneticAlgorithm():
         
         # list_perkuliahan sudah menjadi Individu
         return timetable
-       
+    
+    def initTransferredActivity(self, reset):
+        if reset:
+            for key in self.transferred:
+                self.transferred[key] = False
+        else:
+            individu = self.population[0]
+            timeslot = len(individu[0])
+            ruangan = len(individu)
+            for room in range(ruangan):
+                for time in range(timeslot):
+                    activity = individu[room][time]
+                    if(activity != ''):
+                        self.transferred[activity] = False
+
     def removeUnwantedSesi(self):
         for unwanted in self.unwanted_sesi:
             if unwanted in default_sesi:
@@ -143,7 +158,7 @@ class GeneticAlgorithm():
         """ Initialize population with random strings """
         self.population = []
         # self.sesi = self.removeUnwantedSesi()
-
+        
         for _ in range(self.population_size):
             # Enter individu to population
             individual = self._initIndividu()
@@ -151,7 +166,7 @@ class GeneticAlgorithm():
             # print("End of individual")
             self.population.append(individual)
         # print(self.timetable_skpb)
-
+        self.initTransferredActivity(False)
     # Return number of violation [x,y,z] for an individual
     def _individuConstrain(self, individu):
         x = 0 # First to third constraint
@@ -195,32 +210,6 @@ class GeneticAlgorithm():
                         if abs(index_to_sesi - int(self.list_skpb[s][12:15])) < 2:
                             p = p+1
         
-
-        # print("Perkuliahan in table: " , count_perkuliahan_table)
-        # for i in range(len(individu)):
-        #     cnt_day = 0
-        #     for j in range(i+1,len(individu)):
-        #         if individu[i][2:9] != individu[j][2:9]:
-        #             # First constraint: Dosen yang sama tidak bisa mengajar 2 MK di waktu yang sama
-        #             if individu[i][0:2] == individu[j][0:2]: # Sama dosen
-        #                 if abs(int(individu[i][12:15]) - int(individu[j][12:15])) < 2: # Sama hari sesi
-        #                     x = x + 1
-        #             # Second constraint: Ruangan yang sama tidak dapat dipakai di waktu yang sama
-        #             if individu[i][9:12] == individu[j][9:12]: # Sama ruangan
-        #                 if abs(int(individu[i][12:15]) - int(individu[j][12:15])) < 2: # Sama hari sesi
-        #                     y = y + 1
-                    
-        #             # Third constraint: Satu dosen maksimal mengajar 2x sehari
-        #             if individu[i][0:2] == individu[j][0:2]: # Sama dosen
-        #                 if individu[i][12] == individu[j][12]: # Sama hari
-        #                     cnt_day = cnt_day + 1
-        #             if cnt_day > 2:
-        #                 z = z + cnt_day - 2
-                   
-        #     p = p + self.skpbConstraint(individu[i])
-        #     q = q + self.prefrensiConstraint(individu[i])
-        
-        
         return [x,y,z,p,q]
     
     def prefrensiConstraint(self, gen):
@@ -240,14 +229,15 @@ class GeneticAlgorithm():
         return pnow
 
     def individuFitness(self, individual):
-        w1 = 50
-        w2 = 50
-        w3 = 16
-        w4 = 15
-        w5 = 1
+        w1 = 44
+        w2 = 44
+        w3 = 11
+        w4 = 1
         x,y,z,p,q = self._individuConstrain(individual)
         f1 = 0
         f2= 0
+        f3=0
+        f4 =0
         if(x == 0):
             f1 = w1
         else:
@@ -257,7 +247,19 @@ class GeneticAlgorithm():
             f2 = w2
         else:
             f2 = w2/(y + 1e-8)
-        fitness = f1 + f2
+
+        if(p == 0):
+            f3 = w3
+        else:
+            f3 = w3/(p + 1e-8)
+        
+        if(q == 0):
+            f4 = w4
+        else:
+            f4 = w4/(q + 1e-8)
+
+
+        fitness = f1 + f2 +f3 + f4
         return [fitness, x,y,z,p,q]
           
     def _calculate_fitness(self):
@@ -308,42 +310,88 @@ class GeneticAlgorithm():
     def _mutate(self, individual, highest_fitness, avg_fitness):
         """ Randomly change the individual's characters with probability
         self.mutation_rate """
-        # print(individual)
-        p3 = random.random()
-        p4 = random.random()
-        individual = list(individual)
-        fitness,xm,ym,zm,ppm,qm = self.individuFitness(individual)
-        pm = 0
-        if fitness >= avg_fitness:
-            pm = p3 * (highest_fitness-fitness)/(highest_fitness-avg_fitness + 1e-8) + 1e-8
-        else:
-            pm = p4
-        for j in range(len(individual)):
-            # Make change with probability mutation_rate
-            # if np.random.random() < pm:
-                if xm >ym or qm > 0:
-                    temp_str = individual[j][0:12]
-                    temp_str = temp_str + random.sample(all_sesi,1)[0]
-                    individual[j] = temp_str
-                else: 
-                    temp_str = individual[j][0:9]
-                    temp_str = temp_str + random.sample(self.data_ruangan,1)[0] + individual[j][12:15]
-                    individual[j] = temp_str
-                # else:
-                #     temp_str = individual[j][0:9]
-                #     temp_str = temp_str + random.sample(data_ruangan,1)[0] + random.sample(sesi,1)[0]
-                #     individual[j] = temp_str
-        # Return mutated individual as string
+        while True:
+            random_time_slot1 = np.random.randint(0,45)
+            random_time_slot2 = np.random.randint(0,45)
+            if random_time_slot1 != random_time_slot2:
+                break
+        
+        for i in range(len(individual)):
+            tmp_activity = individual[i][random_time_slot1]
+            individual[i][random_time_slot1] = individual[i][random_time_slot2]
+            individual[i][random_time_slot2] = tmp_activity
+
+        
         return individual
+    
+    def transferProcess(self, parent1,parent2):
+        timeslot = len(parent1[0])
+        ruangan = len(parent1)
+        all_ruangan = []
+        array_of_timeslot = []
+        for i in range(len(all_sesi)):
+            array_of_timeslot.append(i)
+        for i in range(ruangan):
+            all_ruangan.append(i)
+
+        n_parent1 = 35
+        n_parent2 = 10
+        
+
+        all_indices = np.array(array_of_timeslot)
+       
+        random_t1_slot = np.random.choice(all_indices, size=n_parent1, replace=False)
+        random_t2_slot = np.random.choice(all_indices, size=n_parent2, replace=False)
+        random_t2_slot = np.setdiff1d(all_indices, random_t1_slot)[:n_parent2]
+
+        child1 = [['' for j in range(timeslot)] for i in range(ruangan)]
+        for time in random_t1_slot:
+            for room in range(ruangan):
+                activity = parent1[room][time]
+               
+                if activity != '':
+                    child1[room][time] = activity
+                    self.transferred[activity] = True
+
+        for time in random_t2_slot:
+            for room in range(ruangan):
+                activity = parent2[room][time]  
+                if activity != '' and self.transferred[activity] == False:
+                    child1[room][time] = activity
+                    self.transferred[activity] = True
+        
+
+        # APPLY HA FOR COURSE THAT HAS NOT BEEN TRANSFERRED
+        len_unassigned = 0
+        for key in self.transferred:
+            if self.transferred[key] == False:
+                len_unassigned = len_unassigned + 1
+        
+        for key in self.transferred:
+            if self.transferred[key] == False:
+                while True:
+                    random_HA_time = np.random.choice(all_indices,size=1, replace=False)
+                    random_HA_room = np.random.choice(np.array(all_ruangan), size=1, replace=False)
+                    if child1[random_HA_room[0]][random_HA_time[0]] == '':
+                        self.transferred[key] = True
+                        child1[random_HA_room[0]][random_HA_time[0]] = key
+                        break
+        
+        self.initTransferredActivity(True)
+        return child1
 
     def _crossover(self, parent1, parent2):
         """ Create children from parents by crossover """
+        child1 = self.transferProcess(parent1, parent2)
+        child2 = self.transferProcess(parent2, parent1)
+        return child1,child2
+                
         # Select random crossover point
-        cross_i = np.random.randint(0, len(parent1))
-        child1 = parent1[:cross_i] + parent2[cross_i:]
-        child2 = parent2[:cross_i] + parent1[cross_i:]
-        # print("c1 " ,child1 , " c2 " , child2)
-        return child1, child2
+        # cross_i = np.random.randint(0, len(parent1))
+        # child1 = parent1[:cross_i] + parent2[cross_i:]
+        # child2 = parent2[:cross_i] + parent1[cross_i:]
+        # # print("c1 " ,child1 , " c2 " , child2)
+        # return child1, child2
     
     def terminate(self, population_fitness):
         avg = sum(population_fitness) / len(population_fitness)
@@ -377,7 +425,7 @@ class GeneticAlgorithm():
             highest_fitness = max(population_fitness)
             lowest_fitness = min(population_fitness)
             avg_fitness = (sum(population_fitness) / len(population_fitness))
-            print(avg_fitness)
+            # print(avg_fitness)
         # #     # If we have found individual which matches the target => Done
             if highest_fitness >= maximum_fitness:
                 maximum_fitness = highest_fitness
@@ -395,46 +443,47 @@ class GeneticAlgorithm():
             for fitness in population_fitness:
                 probability = 0
                 if fitness >= avg_fitness:
-                    probability = ((fitness-avg_fitness)/(highest_fitness-avg_fitness)) 
+                    probability = ((fitness-avg_fitness)/(highest_fitness-avg_fitness+1e-8)) 
                 else:
-                    probability =  ((avg_fitness-fitness)/(avg_fitness-lowest_fitness))
+                    probability =  ((avg_fitness-fitness)/(avg_fitness-lowest_fitness+1e-8))
                 
                 probability = probability / sum(population_fitness)
                 # probability = probability * 100
                 parent_probabilities.append(probability)
-            print(sum(parent_probabilities))
-            print(parent_probabilities)
+            # print(sum(parent_probabilities))
+            # print(parent_probabilities)
         # #     # Determine the next generation
             new_population = []
             for i in np.arange(0, self.population_size):
         # #         # Select two parents randomly according to probabilities
                 
                 parent1_f, parent2_f = random.choices(population_fitness, k=2, weights=parent_probabilities)
-                # parent1_index = population_fitness.index(parent1_f)
-                # parent1 = self.population[parent1_index]
+                parent1_index = population_fitness.index(parent1_f)
+                parent1 = self.population[parent1_index]
         #         # print(parent1)
                 
 
-        #         parent2_index = population_fitness.index(parent2_f)
-        #         parent2 = self.population[parent2_index]
+                parent2_index = population_fitness.index(parent2_f)
+                parent2 = self.population[parent2_index]
 
         # #         # Perform crossover to produce offspring
-        #         child1, child2 = self._crossover(parent1, parent2)
+                child1, child2 = self._crossover(parent1, parent2)
         # #         # Save mutated offspring for next generation
-        #         new_population += [self._mutate(child1,highest_fitness,avg_fitness), self._mutate(child2,highest_fitness,avg_fitness)]
+                # new_population += [child1, child2]
+                new_population += [self._mutate(child1,highest_fitness,avg_fitness), self._mutate(child2,highest_fitness,avg_fitness)]
 
-        #     print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
+            print ("[%d Epoch, Fitness: %.2f]" % (epoch,highest_fitness))
            
-        #     self.population = new_population
+            self.population = new_population
         #     # print(self.population)
 
-        # if highest_fitness <= maximum_fitness:
-        #     fittest_individual = most_fit
-        #     highest_fitness = maximum_fitness
-        # print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
+        if highest_fitness <= maximum_fitness:
+            fittest_individual = most_fit
+            highest_fitness = maximum_fitness
+        print ("[%d Answer: '%s']\n [Fitness: %.2f]" % (epoch, fittest_individual, highest_fitness))
         # print("SKPB ", self.list_skpb)
-        # x,y,z,p,q = self._individuConstrain(fittest_individual)
-        # print(x,y,z,p,q)
+        x,y,z,p,q = self._individuConstrain(fittest_individual)
+        print(x,y,z,p,q)
        
         # self.parseJsn(fittest_individual)
 
