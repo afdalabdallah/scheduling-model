@@ -19,7 +19,7 @@ default_sesi=[]
 # key = kode dosen, value: list sesi prefrensi
 dosenPrefensiDict = {}
 for i in range(1,6):
-    for j in range(1,10,2):
+    for j in range(1,11,2):
         temp_sesi=""
         if j < 10:
             default_sesi.append(str(i)+"0"+str(j))
@@ -27,7 +27,7 @@ for i in range(1,6):
             default_sesi.append(str(i)+str(j))
 all_sesi = []
 for i in range(1,6):
-    for j in range(1,10):
+    for j in range(1,11):
         temp_sesi=""
         if j < 10:
             all_sesi.append(str(i)+"0"+str(j))
@@ -112,7 +112,7 @@ class GeneticAlgorithm():
                 random_rows = np.random.choice(np.arange(len(self.data_ruangan)), size=1, replace=False)
                 while(True):
                     random_cols = np.random.choice(np.arange(len(all_sesi)), size=1, replace=False)
-                    if (random_cols not in self.unwanted_sesi) and (timetable[int(random_rows)][int(random_cols)] == ''):
+                    if (all_sesi[int(random_cols)] not in self.unwanted_sesi) and (timetable[int(random_rows)][int(random_cols)] == ''):
                         break
               
                 
@@ -152,7 +152,7 @@ class GeneticAlgorithm():
                 default_sesi.remove(unwanted)
             if unwanted in all_sesi:
                 all_sesi.remove(unwanted)
-        return default_sesi
+        return all_sesi
 
     def _initialize(self):
         """ Initialize population with random strings """
@@ -229,9 +229,9 @@ class GeneticAlgorithm():
         return pnow
 
     def individuFitness(self, individual):
-        w1 = 44
-        w2 = 44
-        w3 = 11
+        w1 = 45
+        w2 = 45
+        w3 = 9
         w4 = 1
         x,y,z,p,q = self._individuConstrain(individual)
         f1 = 0
@@ -265,9 +265,9 @@ class GeneticAlgorithm():
     def _calculate_fitness(self):
         """ Calculates the fitness of each individual in the population """
         population_fitness = []
-        w1 = 44
-        w2 = 44
-        w3 = 11
+        w1 = 45
+        w2 = 45
+        w3 = 9
         w4 = 1
         
         for individual in self.population:
@@ -310,16 +310,32 @@ class GeneticAlgorithm():
     def _mutate(self, individual, highest_fitness, avg_fitness):
         """ Randomly change the individual's characters with probability
         self.mutation_rate """
+        n = np.random.randint(1,len(individual))
+        random_row = []
+        while n > 0:
+            row = np.random.randint(0,len(individual))
+            if row in random_row:
+                continue
+            else:
+                random_row.append(row)
+                n-=1
+        
         while True:
             random_time_slot1 = np.random.randint(0,45)
             random_time_slot2 = np.random.randint(0,45)
             if random_time_slot1 != random_time_slot2:
                 break
         
-        for i in range(len(individual)):
-            tmp_activity = individual[i][random_time_slot1]
-            individual[i][random_time_slot1] = individual[i][random_time_slot2]
-            individual[i][random_time_slot2] = tmp_activity
+        for row in random_row:
+            tmp_activity = individual[row][random_time_slot1]
+            individual[row][random_time_slot1] = individual[row][random_time_slot2]
+            individual[row][random_time_slot2] = tmp_activity
+
+
+        # for i in range(len(individual)):
+        #     tmp_activity = individual[i][random_time_slot1]
+        #     individual[i][random_time_slot1] = individual[i][random_time_slot2]
+        #     individual[i][random_time_slot2] = tmp_activity
 
         
         return individual
@@ -334,8 +350,10 @@ class GeneticAlgorithm():
         for i in range(ruangan):
             all_ruangan.append(i)
 
-        n_parent1 = 35
-        n_parent2 = 10
+        n_parent1 = int(len(parent1[0]) * 80 / 100)
+        n_parent2 = int(len(parent2[0]) * 20 / 100)
+        # n_parent1 = 36
+        # n_parent2 = 9
         
 
         all_indices = np.array(array_of_timeslot)
@@ -346,6 +364,8 @@ class GeneticAlgorithm():
 
         child1 = [['' for j in range(timeslot)] for i in range(ruangan)]
         for time in random_t1_slot:
+            if all_sesi[time] in self.unwanted_sesi:
+                continue
             for room in range(ruangan):
                 activity = parent1[room][time]
                
@@ -354,6 +374,8 @@ class GeneticAlgorithm():
                     self.transferred[activity] = True
 
         for time in random_t2_slot:
+            if all_sesi[time] in self.unwanted_sesi:
+                continue
             for room in range(ruangan):
                 activity = parent2[room][time]  
                 if activity != '' and self.transferred[activity] == False:
@@ -372,7 +394,7 @@ class GeneticAlgorithm():
                 while True:
                     random_HA_time = np.random.choice(all_indices,size=1, replace=False)
                     random_HA_room = np.random.choice(np.array(all_ruangan), size=1, replace=False)
-                    if child1[random_HA_room[0]][random_HA_time[0]] == '':
+                    if child1[random_HA_room[0]][random_HA_time[0]] == '' and all_sesi[int(random_HA_time)] not in self.unwanted_sesi:
                         self.transferred[key] = True
                         child1[random_HA_room[0]][random_HA_time[0]] = key
                         break
@@ -485,38 +507,52 @@ class GeneticAlgorithm():
         x,y,z,p,q = self._individuConstrain(fittest_individual)
         print(x,y,z,p,q)
        
-        # self.parseJsn(fittest_individual)
+        self.parseJsn(fittest_individual,highest_fitness,x,y,z,p,q)
 
-    def parseJsn(self,individual):
+    def parseJsn(self,individual,highest_fitness,x,y,z,p,q):
         f = open('result.json','w')
         result = {
             "data" :[],
-            "skpb":[]
+            "skpb":[],
+            "violated_constraint":{}
         }
-        for index in range(len(individual)):
-            res = {
-                "dosen":individual[index][0:2],
-                "mata_kuliah": individual[index][2:8],
-                "kelas": individual[index][8],
-                "ruangan": individual[index][9:12],
-                "sesi":individual[index][12:15],
-                "preferensi": self.data["data"][index]["preferensi"],
-                "tipe": "jurusan",
-                "rmk": self.data["data"][index]["rmk"]
-            }
-            result["data"].append(res)
+        for time in range(len(individual[0])):
+            sesi = all_sesi[time]
+            for room in range(len(individual)):
+                if individual[room][time] != "":
+                    dosen = individual[room][time][0:2]
+                    ruangan = self.data_ruangan[room]
+                    
+                    res = {
+                        "dosen":dosen,
+                        "mata_kuliah": individual[room][time][2:8],
+                        "kelas": individual[room][time],
+                        "ruangan": ruangan, #a
+                        "sesi":sesi, #a
+                        "time": time,
+                        # "preferensi": dosenPrefensiDict[dosen],
+                        "tipe": "jurusan",
+                        # "rmk": self.data["data"][index]["rmk"]
+                    }
+                    result["data"].append(res)
         for skpb in self.list_skpb:
             res = {
-                "dosen":skpb[0:2],
-                "mata_kuliah": skpb[2:8],
+                "kode_dosen": skpb[0:2],
+                "kode_mk": skpb[2:8],
                 "kelas": skpb[8],
                 "ruangan": skpb[9:12],
-                "sesi":skpb[12:15],
+                "sesi": skpb[12:15],
                 "preferensi": [],
                 "tipe": "SK",
-                "rmk": "SKPB"
+                "rumpun": "SKPB"
             }
             result["skpb"].append(res)
+        result["violated_constraint"]["first_constraint"] = x
+        result["violated_constraint"]["second_constraint"] = y
+        result["violated_constraint"]["third_constraint"] = z
+        result["violated_constraint"]["fourth_constraint"] = p
+        result["violated_constraint"]["fifth_constraint"] = q
+        result["fitness"] = highest_fitness
         f.write(json.dumps(result))
         f.close()
     
