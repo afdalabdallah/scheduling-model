@@ -26,7 +26,7 @@ for i in range(1, 6):
             default_sesi.append(str(i) + str(j))
 all_sesi = []
 for i in range(1, 6):
-    for j in range(1, 11):
+    for j in range(1, 4):
         temp_sesi = ""
         if j < 10:
             all_sesi.append(str(i) + "0" + str(j))
@@ -97,7 +97,7 @@ class GeneticAlgorithm():
         timetable = [['' for j in range(cols)] for i in range(rows)]
       
         # Inisiasi untuk SKP+B
-        self.timetable_skpb=['' for i in range(cols)]
+        self.timetable_skpb=['' for i in range(50)]
         self.list_skpb = []
         for data in self.data['data']:
             # print(data["preferensi"])
@@ -111,12 +111,14 @@ class GeneticAlgorithm():
                 random_cols=0
                 # print(data['mata_kuliah'][0:2]," Didalem if")
                 class_activity = data['dosen']+data['mata_kuliah']+data['kelas']
-                random_rows = np.random.choice(np.arange(len(self.data_ruangan)), size=1, replace=False)
+                # random_rows = np.random.choice(np.arange(len(self.data_ruangan)), size=1, replace=False)
                 while(True):
-                    random_cols = np.random.choice(np.arange(len(all_sesi)-1), size=1, replace=False)
+                    random_rows = np.random.choice(np.arange(len(self.data_ruangan)), size=1, replace=False)
+                    random_cols = np.random.choice(np.arange(len(all_sesi)), size=1, replace=False)
                     if (all_sesi[int(random_cols)] not in self.unwanted_sesi) and (timetable[int(random_rows)][int(random_cols)] == ''):
-                        if (timetable[int(random_rows)][int(random_cols)+1] == '') and (random_cols != 0 and timetable[int(random_rows)][int(random_cols)-1] == ''):
-                            break
+                        print("kena disini")
+                        # if (timetable[int(random_rows)][int(random_cols)+1] == '') and (random_cols != 0 and timetable[int(random_rows)][int(random_cols)-1] == ''):
+                        break
               
                 # print(class_activity, " ", random_cols," ", timetable[int(random_rows)][int(random_cols)+1])
                 class_activity = data['dosen']+data['mata_kuliah']+data['kelas']
@@ -386,11 +388,12 @@ class GeneticAlgorithm():
                     random_HA_time = np.random.choice(np.array(len(all_sesi)-1),size=1, replace=False)
                     random_HA_room = np.random.choice(np.array(all_ruangan), size=1, replace=False)
                     if child1[random_HA_room[0]][random_HA_time[0]] == '' and all_sesi[int(random_HA_time)] not in self.unwanted_sesi:
+                        print("Di HA")
                         #(random_cols != 0 and timetable[int(random_rows)][int(random_cols)-1] == '')
-                        if child1[random_HA_room[0]][random_HA_time[0]+1] == '' and (random_HA_time != 0 and child1[random_HA_room[0]][random_HA_time[0]-1] == ''):
-                            self.transferred[key] = True
-                            child1[random_HA_room[0]][random_HA_time[0]] = key
-                            break
+                        # if child1[random_HA_room[0]][random_HA_time[0]+1] == '' and (random_HA_time != 0 and child1[random_HA_room[0]][random_HA_time[0]-1] == ''):
+                        self.transferred[key] = True
+                        child1[random_HA_room[0]][random_HA_time[0]] = key
+                        break
         
         self.initTransferredActivity(True)
         return child1
@@ -439,13 +442,14 @@ class GeneticAlgorithm():
                 random_col = 0
                 random_row = 0
                 while True:
-                    random_col = np.random.randint(0,len(individu[0])-1)
+                    random_col = np.random.randint(0,len(individu[0]))
                     random_row = np.random.randint(0, len(individu))
-                    if individu[random_row][random_col] == '' and individu[random_row][random_col+1] == '':
-                        if random_col != 0 and individu[random_row][random_col-1] == '':
-                            individu[random_row][random_col] = individu[first_value][second_value]
-                            x-=1
-                            break
+                    if individu[random_row][random_col] == '' :
+                    # and individu[random_row][random_col+1] == '':
+                        # if random_col != 0 and individu[random_row][random_col-1] == '':
+                        individu[random_row][random_col] = individu[first_value][second_value]
+                        x-=1
+                        break
                 
         return individu,x,y,z,p,q
     def terminate(self, population_fitness):
@@ -513,7 +517,7 @@ class GeneticAlgorithm():
             avg_fitness = (sum(population_fitness) / len(population_fitness))
             # print(avg_fitness)
         # #     # If we have found individual which matches the target => Done
-            if highest_fitness > maximum_fitness:
+            if highest_fitness >= maximum_fitness:
                 maximum_fitness = highest_fitness
                 most_fit = fittest_individual
                 optimum_epoch = epoch
@@ -636,7 +640,7 @@ class GeneticAlgorithm():
         return result
 
 def main():
-    f = open("splitted.json")
+    f = open("splitted_sesi.json")
     chunks = json.load(f)
     f.close()
     res = {}

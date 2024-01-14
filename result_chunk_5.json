@@ -1,0 +1,1 @@
+{"chunk_5": {"violated_constraint": {"first_constraint": 0, "second_constraint": 0, "third_constraint": 0, "fourth_constraint": 68, "fifth_constraint": 0, "sixth_constraint": 4}, "list_ruangan": ["101", "102", "103", "104", "105", "501", "106", "107", "108", "301"], "fitness": 86.26470562172578, "unwanted_sesi": [], "optimum_epoch": 254}}

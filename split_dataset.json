@@ -1,0 +1,2121 @@
+[
+  {
+    "dosen": "HF",
+    "mata_kuliah": "EF4103",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AY",
+    "mata_kuliah": "EF4201",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SR",
+    "mata_kuliah": "EF4104",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RA",
+    "mata_kuliah": "EF4102",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RS",
+    "mata_kuliah": "EF4513",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "KR",
+    "mata_kuliah": "EF4104",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DS",
+    "mata_kuliah": "EF4104",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "NS",
+    "mata_kuliah": "EK4201",
+    "kelas": "F",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "CF",
+    "mata_kuliah": "EK4201",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "YP",
+    "mata_kuliah": "EF4101",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DH",
+    "mata_kuliah": "EF4710",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DA",
+    "mata_kuliah": "EK4201",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BA",
+    "mata_kuliah": "EF4103",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BA",
+    "mata_kuliah": "EF4103",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RS",
+    "mata_kuliah": "EF4505",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "VH",
+    "mata_kuliah": "EF4304",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "JL",
+    "mata_kuliah": "EF4709",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "FB",
+    "mata_kuliah": "EF4501",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "TA",
+    "mata_kuliah": "EF4102",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "KR",
+    "mata_kuliah": "EF4104",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AY",
+    "mata_kuliah": "EK4201",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AY",
+    "mata_kuliah": "EF4504",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DA",
+    "mata_kuliah": "EK4201",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "NS",
+    "mata_kuliah": "EF4406",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SA",
+    "mata_kuliah": "EF4301",
+    "kelas": "F",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DP",
+    "mata_kuliah": "EF4101",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "WS",
+    "mata_kuliah": "EF4102",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AL",
+    "mata_kuliah": "EF4514",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "UG4916",
+    "kelas": "A",
+    "ruangan": "999",
+    "sesi": "201",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "SM4101",
+    "kelas": "A",
+    "ruangan": "999",
+    "sesi": "205",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "HS",
+    "mata_kuliah": "EF4705",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SD",
+    "mata_kuliah": "EF4102",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AY",
+    "mata_kuliah": "EF4504",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "MN",
+    "mata_kuliah": "EF4104",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DA",
+    "mata_kuliah": "EK4201",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DS",
+    "mata_kuliah": "EF4101",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AB",
+    "mata_kuliah": "EF4707",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "FB",
+    "mata_kuliah": "EF4301",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "HT",
+    "mata_kuliah": "EF4517",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DH",
+    "mata_kuliah": "EF4504",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "WS",
+    "mata_kuliah": "EF4502",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AW",
+    "mata_kuliah": "EF4305",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AW",
+    "mata_kuliah": "EF4305",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RJ",
+    "mata_kuliah": "EF4302",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "VH",
+    "mata_kuliah": "EF4304",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BJ",
+    "mata_kuliah": "EF4303",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AM",
+    "mata_kuliah": "EF4303",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AB",
+    "mata_kuliah": "EF4501",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "JL",
+    "mata_kuliah": "EF4503",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RN",
+    "mata_kuliah": "EF4307",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RA",
+    "mata_kuliah": "EF4102",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AL",
+    "mata_kuliah": "EF4307",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "TA",
+    "mata_kuliah": "EF4502",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UY",
+    "mata_kuliah": "EF4307",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BS",
+    "mata_kuliah": "EF4502",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RL",
+    "mata_kuliah": "EF4302",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "HF",
+    "mata_kuliah": "EF4504",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SR",
+    "mata_kuliah": "EF4307",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "UG4916",
+    "kelas": "I",
+    "ruangan": "999",
+    "sesi": "307",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RM",
+    "mata_kuliah": "EF4508",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IM",
+    "mata_kuliah": "EF4104",
+    "kelas": "G",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IM",
+    "mata_kuliah": "EF4104",
+    "kelas": "G",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "MN",
+    "mata_kuliah": "EF4104",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IM",
+    "mata_kuliah": "EF4104",
+    "kelas": "H",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "MN",
+    "mata_kuliah": "EF4104",
+    "kelas": "F",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RL",
+    "mata_kuliah": "EF4509",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DS",
+    "mata_kuliah": "EF4101",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "YP",
+    "mata_kuliah": "EF4101",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "YP",
+    "mata_kuliah": "EF4101",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "FB",
+    "mata_kuliah": "ER4505",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "WS",
+    "mata_kuliah": "EF4502",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BA",
+    "mata_kuliah": "EF4103",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "JL",
+    "mata_kuliah": "EF4503",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "VH",
+    "mata_kuliah": "EF4304",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "ST",
+    "mata_kuliah": "EF4307",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AB",
+    "mata_kuliah": "EF4501",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "JL",
+    "mata_kuliah": "EF4503",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SC",
+    "mata_kuliah": "EF4505",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BJ",
+    "mata_kuliah": "EF4303",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IS",
+    "mata_kuliah": "EF4301",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BS",
+    "mata_kuliah": "EF4502",
+    "kelas": "F",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BJ",
+    "mata_kuliah": "EF4502",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DA",
+    "mata_kuliah": "EF4406",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IS",
+    "mata_kuliah": "EF4302",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AL",
+    "mata_kuliah": "EF4104",
+    "kelas": "L",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "SM4101",
+    "kelas": "I",
+    "ruangan": "999",
+    "sesi": "207",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "SM4101",
+    "kelas": "B",
+    "ruangan": "999",
+    "sesi": "209",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "SM4101",
+    "kelas": "C",
+    "ruangan": "999",
+    "sesi": "405",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "SM4101",
+    "kelas": "D",
+    "ruangan": "999",
+    "sesi": "407",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "UG",
+    "mata_kuliah": "SM4101",
+    "kelas": "E",
+    "ruangan": "999",
+    "sesi": "409",
+    "preferensi": {
+      "hari": null,
+      "sesi": null
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RA",
+    "mata_kuliah": "EF4102",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "DS",
+    "mata_kuliah": "EF4601",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RN",
+    "mata_kuliah": "EF4104",
+    "kelas": "K",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RJ",
+    "mata_kuliah": "ER4403",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IM",
+    "mata_kuliah": "EF4301",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "FB",
+    "mata_kuliah": "EF4301",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IS",
+    "mata_kuliah": "EF4301",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "WS",
+    "mata_kuliah": "EF4502",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AW",
+    "mata_kuliah": "EF4305",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BS",
+    "mata_kuliah": "EF4103",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "JL",
+    "mata_kuliah": "EF4503",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "VH",
+    "mata_kuliah": "EF4304",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "HF",
+    "mata_kuliah": "EF4711",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BS",
+    "mata_kuliah": "EF4303",
+    "kelas": "F",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Rabu", "Kamis"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SC",
+    "mata_kuliah": "EF4505",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RM",
+    "mata_kuliah": "EF4303",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RM",
+    "mata_kuliah": "EF4704",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RN",
+    "mata_kuliah": "EF4104",
+    "kelas": "J",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "IS",
+    "mata_kuliah": "EF4302",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AB",
+    "mata_kuliah": "EF4501",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "HF",
+    "mata_kuliah": "EF4504",
+    "kelas": "D",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "SA",
+    "mata_kuliah": "EF4504",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "RL",
+    "mata_kuliah": "EF4302",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AM",
+    "mata_kuliah": "EF4701",
+    "kelas": "A",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "HS",
+    "mata_kuliah": "EF4303",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Rabu", "Kamis"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "FB",
+    "mata_kuliah": "EF4501",
+    "kelas": "B",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "AW",
+    "mata_kuliah": "EF4305",
+    "kelas": "C",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8",
+        "Sesi 9",
+        "Sesi 10"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "BA",
+    "mata_kuliah": "EF4103",
+    "kelas": "F",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "VH",
+    "mata_kuliah": "EF4304",
+    "kelas": "E",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Kamis", "Jumat"],
+      "sesi": [
+        "Sesi 1",
+        "Sesi 2",
+        "Sesi 3",
+        "Sesi 4",
+        "Sesi 5",
+        "Sesi 6",
+        "Sesi 7",
+        "Sesi 8"
+      ]
+    },
+    "tipe": "Jurusan - W",
+    "rumpun": ""
+  },
+  {
+    "dosen": "MN",
+    "mata_kuliah": "EF4712",
+    "kelas": "I",
+    "ruangan": "",
+    "sesi": "",
+    "preferensi": {
+      "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+      "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+    },
+    "tipe": "Jurusan - P",
+    "rumpun": ""
+  }
+]

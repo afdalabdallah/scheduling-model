@@ -1,0 +1,132 @@
+{
+  "chunk_5": {
+    "violated_constraint": {
+      "first_constraint": 0,
+      "second_constraint": 0,
+      "third_constraint": 0,
+      "fourth_constraint": 68,
+      "fifth_constraint": 0,
+      "sixth_constraint": 4
+    },
+    "list_ruangan": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "501",
+      "106",
+      "107",
+      "108",
+      "301"
+    ],
+    "fitness": 86.26470562172578,
+    "unwanted_sesi": [],
+    "optimum_epoch": 254
+  },
+  "chunk_10": {
+    "violated_constraint": {
+      "first_constraint": 0,
+      "second_constraint": 0,
+      "third_constraint": 0,
+      "fourth_constraint": 58,
+      "fifth_constraint": 1,
+      "sixth_constraint": 9
+    },
+    "list_ruangan": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "501",
+      "106",
+      "107",
+      "108",
+      "301",
+      "302",
+      "111",
+      "112",
+      "113",
+      "114"
+    ],
+    "fitness": 83.90613009609751,
+    "unwanted_sesi": [],
+    "optimum_epoch": 72
+  },
+  "chunk_15": {
+    "violated_constraint": {
+      "first_constraint": 0,
+      "second_constraint": 0,
+      "third_constraint": 0,
+      "fourth_constraint": 64,
+      "fifth_constraint": 1,
+      "sixth_constraint": 9
+    },
+    "list_ruangan": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "501",
+      "106",
+      "107",
+      "108",
+      "301",
+      "302",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119"
+    ],
+    "fitness": 83.90451346678769,
+    "unwanted_sesi": [],
+    "optimum_epoch": 12
+  },
+  "chunk_20": {
+    "violated_constraint": {
+      "first_constraint": 0,
+      "second_constraint": 0,
+      "third_constraint": 0,
+      "fourth_constraint": 62,
+      "fifth_constraint": 0,
+      "sixth_constraint": 7
+    },
+    "list_ruangan": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "501",
+      "106",
+      "107",
+      "108",
+      "301",
+      "302",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224"
+    ],
+    "fitness": 84.4447002073575,
+    "unwanted_sesi": [],
+    "optimum_epoch": 98
+  }
+}
